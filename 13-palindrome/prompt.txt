@@ -1,0 +1,13 @@
+//write function that determins is string is palin drome
+// input - string
+// output - true / false
+
+//example : 'racecar' - True
+//consdiering spaces
+//accept string
+
+// a - true
+// aba -  true
+// aa - true
+// aab - false
+// race car - true

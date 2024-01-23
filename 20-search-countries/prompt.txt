@@ -1,0 +1,88 @@
+// search function - first letter of of one ocountries
+//
+// input - prefix string "a" " apple"
+// output - List of string that satrt with "a""apple"
+// const countries = [];
+// compare root to value to do something
+//  input - "a"
+// input - traversing the the word
+// for - comparing value to index
+// ['apple', 'blueberry']
+// root
+
+// How do I put all these countries in a tree and then traverse at search time?
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class Tree {
+  constructor() {
+    this.root = null;
+    this.words = {
+      A: {
+        AL: ["Albania"],
+        AZ: ["Azerbaijan"],
+        AU: ["Austria"],
+        AR: ["Armenia"],
+        AN: ["Andorra"]
+      },
+      B: ["Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria"],
+      C: ["Croatia", "Cyprus", "Czech Republic"],
+      D: ["Denmark"],
+      E: ["Estonia"],
+      F: ["Finland", "France"],
+      G: ["Georgia", "Germany", "Greece"],
+      H: ["Hungary"],
+      I: ["Iceland", "Ireland", "Italy"],
+      K: ["Kosovo"],
+      L: ["Latvia", "Liechtenstein", "Lithuania", "Luxembourg"],
+      M: ["Macedonia", "Malta", "Moldova", "Monaco", "Montenegro"],
+      N: ["Netherlands", "Norway"],
+      P: ["Poland", "Portugal"],
+      R: ["Romania", "Russia"],
+      S: [
+        "San Marino",
+        "Serbia",
+        "Slovakia",
+        "Slovenia",
+        "Spain",
+        "Sweden",
+        "Switzerland"
+      ],
+      T: ["Turkey"],
+      U: ["Ukraine", "United Kingdom"],
+      V: ["Vatican City"]
+    };
+  }
+  search(value) {
+    const firstChar = value[0].toUpperCase();
+    const secondCharacter = value[1].toUpperCase();
+    const combined = firstChar + secondCharacter;
+
+    // this.words.A or this.words.B
+    // words = ['Armenia', 'Austria']
+    // const words = this.words[firstChar];
+
+    // this.words.A.AL this.words.A.AU
+    // ['Armenia'] ['Austria']
+    const combinedLetters = this.words[firstChar][combined];
+
+    for (let i = 0; i < combinedLetters.length; i++) {
+      const word = combinedLetters[i].toLowerCase();
+      for (let j = 0; j < combined.length; j++) {
+        const index = word.indexOf(value.toLowerCase());
+        if (index === 0) {
+          console.log(word);
+        }
+      }
+    }
+  }
+}
+
+const tree = new Tree();
+tree.search("al");

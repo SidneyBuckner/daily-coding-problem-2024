@@ -1,0 +1,6 @@
+Given a string, return in string in reverse order.
+Hint: STACK!
+example: 
+
+input - Awesome
+output - emosewA

@@ -1,0 +1,14 @@
+//Given two strings, return whether they are
+//anagrams of each other.  (true or false).
+
+// Input: "apple", "artist"
+// Output: false
+
+// Input: "Trap", "tarp"
+// Output: true
+
+// Input: "race", "care"
+// Output: true
+
+//alphabetizing - putting letters in order
+//Mapping them??

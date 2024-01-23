@@ -1,0 +1,22 @@
+// Question 1: Given two stings ransomNote and magazine,
+//return true if ransomNote can be constructed from magazine
+//and false otherwise.
+// Each letter in magazine can only be used once in ransomNote.
+//front the characters in magazine can you construct ransom note?
+
+// Example 1:
+// Input: ransomNote = "a", availableCharacters = "b"
+//Output: false
+
+// Example 2:
+// Input: ransomNote = "aa", availableCharacters = "ab"
+//Output: false
+
+// Example 3:
+// Input: ransomNote = "aa", availableCharacters = "aab"
+//Output: true
+//create a set
+// use a for of loop (string) => see if a set has this char
+//if it doesnt add it
+//if it does copmare  to ransomNote and return true if it looks the same
+//return false if checks dont find same characters

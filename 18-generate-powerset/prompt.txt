@@ -1,0 +1,12 @@
+// Given a set of elements, generate the power set (all the subsets)
+
+// input [1, 2, 3]
+// output [[], [1, 2, 3], [1], [2], [3], [1,2], [1,3], [2,3]]
+
+// input => [1,2]
+//output => [[],[1],[2],[1,2]]
+//traversing through an array
+// making a new arry for the subsets
+//could I somehow traverse another arry to
+//pick out the numbers and push them into a new arry?
+//sorting or pushing? -> SPREAD OPERATOR

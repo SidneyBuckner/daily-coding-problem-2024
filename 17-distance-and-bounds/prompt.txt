@@ -1,0 +1,52 @@
+// Given a list of intervals in the format [[l_1, r_1], [l_2, r_2], ..., [l_n, r_n]]
+// where l_i and r_i are the left and right bounds of the interval, find the distance covered by these intervals.
+
+// Example:
+
+// [[1, 5], [7, 10], [8, 12], [2, 6]] covers 10 units.
+//4 //1
+
+/*
+
+Visualization:
+  _____       _____
+ |     |     |     |
+ |     |    _|__   |
+ |  ___|_  | |  |  |
+_|_|___|_|_|_|__|__|__
+ 1 2   5 6 7 8  10 12
+
+*/
+/*
+[[1,5], [2,6], [7, 10], [8,12]]
+[[1, 6], [7, 12]]
+ (6-1) + (12-7) = 10
+*/
+
+//have a pointer / counter to dertermin if weve seen previous subarry
+// comparison for next subarry to the upper left bound
+// Calculating the distance between the left and right numbers.
+//However be aware of the units that intersect - cant count units a second time or third etc .
+
+// X - sort left number pair from least to greatest
+//Traverse the array in the arry
+// make comparisions in subarry to find intervals
+//simplified temp interval
+//left lowerbound and upper bound values?
+//right lowerbound and upper bound values?
+//comparisson
+//removing the overlap and subtract laftmost bounds with right most bounds
+// overlap? Expand the invteral
+
+// make comparisions in subarry to find intervals
+//simplified temp interval
+//left lowerbound and upper bound values?
+//right lowerbound and upper bound values?
+//comparisson
+//removing the overlap and subtract laftmost bounds with right most bounds
+// overlap? Expand the invteral
+/*
+function compare(pair1, pair2) {
+    
+}
+*/

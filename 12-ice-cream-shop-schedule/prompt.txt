@@ -1,0 +1,78 @@
+Ice Cream Shop Scheduler
+
+Problem:
+
+You are tasked with building a scheduling tool for an ice cream shop. The shop owner wants to manage their schedules independently but wishes to ensure there are no appointment conflicts.
+
+Given the current schedule data and a new appointment slot, design a function to check if the new slot conflicts with any existing appointments.
+
+Function Signature:
+
+javascript
+
+function hasConflict(data: Array<Object>, newAppointment: Object): boolean;
+
+Input:
+
+    An array of data objects where each object has the structure:
+        firstName: A string representing the first name of the person who booked the appointment.
+        lastName: A string representing the last name of the person who booked the appointment.
+        dates: An array of time slots. Each time slot is represented as an array of two strings - the start time and the end time (in the format "HH:MM").
+
+    A newAppointment object that has the following structure:
+        firstName: A string representing the first name of the person who wants to book a new appointment.
+        lastName: A string representing the last name of the person who wants to book a new appointment.
+        dates: An array containing a single time slot represented as an array of two strings - the start time and the end time (in the format "HH:MM").
+
+Output:
+
+    Return a boolean value:
+        true if the new appointment conflicts with any existing appointment.
+        false otherwise.
+
+Constraints:
+
+    The dates array in each data object contains 1 to 10 time slots.
+    The time slots in the dates array are non-overlapping for each individual but can overlap between different individuals.
+    The start time of a time slot is always before the end time.
+
+Example:
+
+Consider the following data:
+
+javascript
+
+const data = [
+  {
+    firstName: "Olivia",
+    lastName: "Miller",
+    dates: [["07:00", "08:00"],["12:00", "13:00"], ["16:00", "19:00"]]
+  },
+  // ... (other data points)
+];
+
+Using the function:
+
+javascript
+
+hasConflict(data, {
+  firstName: "John",
+  lastName: "Doe",
+  dates: [["08:00", "09:00"]]
+});
+
+The expected output is false since there are no conflicts with the existing appointments.
+
+However, with the function:
+
+javascript
+
+hasConflict(data, {
+  firstName: "John",
+  lastName: "Doe",
+  dates: [["11:00", "12:30"]]
+});
+
+The expected output is true because of a conflict with Olivia's schedule from "12:00" to "13:00".
+
+Your task is to implement the hasConflict function.

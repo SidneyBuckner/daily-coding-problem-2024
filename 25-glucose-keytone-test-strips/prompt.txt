@@ -1,0 +1,120 @@
+//Test strips - Glucose
+//Ketone
+
+// Map - Object Key Test strips
+// Value = how many requested
+// number of test strip for each
+// amke a count for how many
+//
+
+/*
+---------------------------------------- PART 1 ----------------------------------------
+
+As a Type 2 Diabetes clinic, Virta sends out test strips to patients who monitor their glucose and
+ketone levels. There are two kinds of test strips: ketone test strips and glucose test strips.
+Patients may require different amounts of each test strip based on their condition.
+
+Virta also maintains supplies of the test strips. To start, you will have three box types:
+* Ketone Box
+ * 50 Ketone strips
+ * 0 Glucose strips
+* Glucose Box
+ * 0 Ketone strips
+ * 50 Glucose strips
+* Combo Box 1
+ * 100 Ketone strips
+ * 100 Glucose strips
+
+
+We want to minimize costs by sending as few boxes as possible without
+exceeding the requested test strip amount.
+
+If the request is not wholly divisible by the items in the box, for example, a request of 71 test strips,
+it is ok to only fulfill the divisible part, i.e. 50 test strips.
+
+You will write a program that calculates ordered supplies based on patient requests.
+
+For example:
+* Patient request: glucose_test_strips = 200, ketone_test_strips = 150
+* => Returns order: combo_boxes = 1, glucose_boxes = 2, ketones_boxes = 1
+
+* Patient request: glucose_test_strips = 265, ketone_test_strips = 150
+* => Returns order: combo_boxes = 1, glucose_boxes = 3, ketones_boxes = 1
+*/
+
+//recieve and order on how many user want
+// input - glusoe: 200 ketone: 150
+//output - 1 comobo, glucose - 2 ketone -1
+// input - glusoe: 50  ketone: 50
+//output - 1 glucose - 1 ketone -1
+
+// map out requested amount of strips
+// find a way to count amount of each box to send
+// recudce  count until
+// the amount requestsed test remaining is under 50 at most
+
+/*
+[
+  {
+    name: "Ketone Box",
+    ketoneStrips: 50,
+    glucoseStrips: 0,
+  },
+  {
+    name: "Glucose Box",
+    ketoneStrips: 0,
+    glucoseStrips: 50,    
+  },
+  {
+    name: "Combo Box",
+    ketoneStrips: 100,
+    glucoseStrips: 100,    
+  }  
+]
+*/
+
+// meeting one box condition for glucose & ketone
+//meeting combo condition getting 1 box
+
+//if strip < = 50  => send 1 box
+
+// const sendingTestStrips = (glucoseStrips, ketoneStrips) => {
+//   const boxTypes = [
+//     {
+//       name: "Ketone Box",
+//       ketoneStrips: 50,
+//       glucoseStrips: 0
+//     },
+//     {
+//       name: "Glucose Box",
+//       ketoneStrips: 0,
+//       glucoseStrips: 50
+//     },
+//     {
+//       name: "Combo Box",
+//       ketoneStrips: 100,
+//       glucoseStrips: 100
+//     }
+//   ];
+
+//   const order = {};
+
+//   for (let i = 0; i < boxTypes.length; i++) {
+//     const currentBox = boxTypes[i];
+//     //console.log(currentBox.glucoseStrips)
+//     if (glucoseStrips === currentBox.glucoseStrips) {
+//       //
+//       console.log(1);
+//       order.push(currentBox.name);
+//     }
+//     if (ketoneStrips === currentBox.ketoneStrips) {
+//       //
+//       console.log(1);
+//       order.push(currentBox.name);
+//     }
+//   }
+
+//   return order;
+// };
+
+// sendingTestStrips(50, 50); // output glucose - 1 ketone  - 1

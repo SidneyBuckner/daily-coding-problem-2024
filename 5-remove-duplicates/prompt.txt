@@ -1,0 +1,7 @@
+//  * array with all duplicate values removed.
+//  *
+//  * e.g.
+//  *
+//  *  removeDupes(['a', 'b', 'b', 'c'])
+//  *  #=> ['a', 'b', 'c']
+//  */

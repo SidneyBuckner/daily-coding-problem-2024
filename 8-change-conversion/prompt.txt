@@ -1,0 +1,11 @@
+// Write a function that takes in a number of cents (USD)
+//as an integer less than or equal to 100,
+//and prints out the least amount of coins needed
+//to represent it.
+// 50 => 2 quarters
+// 11 => 1 dime and 1 penny
+// 7 => 1 nickel and 2 pennies
+
+// MAKE 10 EXAMPLES IN FIGMA BEFORE YOU MAKE ANY CODE!
+
+// How much time did you look at this problem?

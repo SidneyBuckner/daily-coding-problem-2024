@@ -1,0 +1,50 @@
+/*Steps:
+ 1. First, display a schedule in date order with the corresponding list of workers that are assigned to work that day.
+
+ 2. Next, display all the workers & their schedules in alphabetical order by last name.
+
+3. After, display all the workers & their shcedules in the newly sorted list by who's scheduled on weekdays
+
+4. Last, display all the workers & their shcedules in  the newly sorted list by who's scheduled on weekends
+*/ 
+
+const data1 =  [
+
+  {
+    firstName: "Olivia",
+    lastName: "Miller",
+    dates: [["07:00", "08:00"],["12:00", "13:00"], ["16:00", "19:00"]]
+  },
+  {
+    firstName: "William",
+    lastName: "Wilson",
+    dates: [["12:00", "13:00"],["15:00", "16:00"], ["16:00", "17:00"]]
+  },
+  {
+    firstName: "Sophia",
+    lastName: "Jones",
+    dates: [["08:00", "10:00"],["10:00", "11:00"], ["14:00", "16:00"]]
+  },
+  {
+    firstName: "David",
+    lastName: "Davis",
+    dates:  [ ["09:00", "11:00"],["13:00", "16:00"], ["17:00", "18:00"]]
+  },
+  {
+    firstName: "Emma",
+    lastName: "Martinez",
+    dates: [ ["09:00", "10:00"],["11:00", "12:00"], ["14:00", "15:00"]]
+  }
+];
+  const data2 = [
+    ["09:00", "10:00"],
+    ["11:00", "12:00"],
+    ["14:00", "15:00"]
+];
+
+// Test cases
+const schedule = [
+  ["09:00", "10:00"],
+  ["11:00", "12:00"],
+  ["14:00", "15:00"]
+];

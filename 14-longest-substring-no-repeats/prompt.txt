@@ -1,0 +1,13 @@
+/* Length of the longest substring with no repeating chars
+    abcabcbb -> 3, abc
+    bab -> 2, ba
+    abeiced -> 5, abeic
+    bbbbaetdgb => 6, baetdg
+*/
+// word.includes(character)
+// x - travering through string at least 1x
+// comparison if char = prev char
+// we'll need to compare 1 char to all the rest somewho
+// how do you know its repeat char
+// pushing char into new string
+// then find length

@@ -1,0 +1,63 @@
+//Hash tables not ordered
+//Fast for finding removeing and deleting values
+//Key Value Pairs
+//JS API but we should know how they work under the hood
+//JS - Map and Objects : Maps have restrictions, only strings as keys
+["#w4g5g", "#45tgre", "#4t5g56", "#2dc084"]; //<- reinvent mapping with
+//key & value pairs
+
+// implementing structure on our onwaiting.
+// How Would we do this? Under the hood!
+//Implementing hash table using an array!
+
+//Hash Functions -> Hasing functions
+// convert keys to a valid array index!
+//hash functions need to be constant time
+// Uniformly clusters at specific indecies
+// Everytime, input needs to give same output
+
+// 1. converting string to a number
+// UTF 16 Character codes - input.charChodeAt(CHARACTER INDEX)
+//console.log("Sidney".charCodeAt(2));
+// 2. Subtracting character code from 96 will give you
+// where the value is alphabetically
+//console.log("Sidney".charCodeAt(2) - 96);
+
+// 3. looping through substracitng char codes and 96
+//Add the char codes together
+//4. Modulous the total number to keep the total number
+//in the bounds of the array the result is a valid
+//number array index to store your data
+
+const hashFunction = (str, arrayLength) => {
+  let totalValue = 0;
+  for (let char of str) {
+    let characterValues = char.charCodeAt(0) - 96;
+    totalValue = (totalValue + characterValues) % arrayLength;
+  }
+  //console.log(totalValue);
+};
+//hashFunction("pink", 30);
+//hashFunction("poison", 30);
+
+//Write a function that validates if 2 movies lengths in the arrray add up to
+// the total flight time
+const inflightEntertainment = (movieLengthsArr, totalFLightLength) => {
+  for (let i = 0; i < movieLengthsArr.length; i++) {
+    for (let j = 0; j < movieLengthsArr.length; j++) {
+      if (
+        movieLengthsArr[i] + movieLengthsArr[j] === totalFLightLength &&
+        movieLengthsArr[i] !== movieLengthsArr[j]
+      ) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+//console.log(inflightEntertainment([12, 30, 90, 30, 90, 70], 180));
+//How do you account for duplicate numbers in different index points?
+//console.log(inflightEntertainment([30, 12, 60, 15], 90));
+
+//
