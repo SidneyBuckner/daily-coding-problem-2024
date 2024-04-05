@@ -13,18 +13,26 @@
 
 /** 
  * Separate array for my product to go in
- * Multiply or divide my indcies to get to the product
+ * Multiply or divide my indices to get to the product
  * Iterate through this array - Loop
 */
 const sampleArray = [3,2,1];
-
+const sampleArray2 = [1, 2, 3, 4, 5];
 const productOfElements = (array)=>{
 const productArray = [];
 let totalProduct = 1;
+let quotient;
 for (let i = 0; i < array.length; i++) {
     totalProduct *= array[i];
-    console.log(` Array value: ${array[i]}, Total Product: ${totalProduct}`);
+    console.log(` Array value [i]: ${array[i]}, Total Product: ${totalProduct}`);
+}
+
+for (let j = 0; j < array.length; j++) {
+quotient = totalProduct / array[j];
+productArray.push(quotient);
     
 }
+return productArray;
 }
-console.log(productOfElements(sampleArray));
+console.log(`Input: ${sampleArray} - Output: ${productOfElements(sampleArray)}`);
+console.log(`Input: ${sampleArray2} - Output: ${productOfElements(sampleArray2)}`);
