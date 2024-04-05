@@ -11,7 +11,20 @@
  * output: [120, 60, 40, 30, 24]
 */
 
-const productOfElements = (string)=>{
-return 'IM WORKING';
+/** 
+ * Separate array for my product to go in
+ * Multiply or divide my indcies to get to the product
+ * Iterate through this array - Loop
+*/
+const sampleArray = [3,2,1];
+
+const productOfElements = (array)=>{
+const productArray = [];
+let totalProduct = 1;
+for (let i = 0; i < array.length; i++) {
+    totalProduct *= array[i];
+    console.log(` Array value: ${array[i]}, Total Product: ${totalProduct}`);
+    
 }
-console.log();
+}
+console.log(productOfElements(sampleArray));

@@ -1,3 +1,12 @@
+### What Do I know about the problem?
+I know that initally since this is an array I need to traverse through it to do SOMETHING.
+Now that I have My values up to the total product that they multiply up to. I need to find a way to push these values into the new array. 
+
+What Im thinking I can do first is that when I get the new product in the first loop and can push the results into the new array. But that wont work since The total product jumps from 3 to 6 and stays at 6. And THe output of my Original test case involves an array with a value of 2 in it. 
+
+This is where I can divide! 
+
+
 ### Results
 Initially I was able to solve the problem with division with O(n) time complexity.
 With the follow-up, I was able to solve it but with a more "brute force" approach that required iterating over the array in a nested fashion, resulting in O(n^2) time complexity.
