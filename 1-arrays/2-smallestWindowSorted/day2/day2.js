@@ -15,6 +15,19 @@ Examples:
 //Placeholder for the end bound to return 
 const sampleArray = [3,7,5,6,9];
 const smallestSortWindow = (array)=>{
-return 'IM WORKING!';
+const result = [];
+let startBound;
+let endBound;
+for (let i = 0; i < array.length; i++) {
+    if(!array[i-1] || array[i+1] < array[i]){
+        startBound = i;
+    }else if(array[i] > array[i +1]){
+        // endBound = i+1;
+
+    }
+
+}
+result.push(startBound, endBound);
+return result;
 }
 console.log(smallestSortWindow(sampleArray));
