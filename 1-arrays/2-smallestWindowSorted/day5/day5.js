@@ -17,8 +17,30 @@ const sampleArray = [3,7,5,6,9];
 const sampleArray2 = [50,36,1,23,4,17,27,39,80];
 const sampleArray3 = [3,5,23,4,60,8,27,80];
 
-const smallestSortWindow = (array)=>{
-
+const smallestSortWindow = (input) => {
+    let rightBound = 0
+    let largestNumberSeen = Number.MIN_SAFE_INTEGER
+ 
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] > largestNumberSeen) {
+            largestNumberSeen = input[i]
+        } else {
+            rightBound = i;
+        }
+    }
+ 
+    let leftBound = 0
+    let smallestNumberSeen = Number.MAX_SAFE_INTEGER
+ 
+    for (let i = input.length - 1; i >= 0; i--) {
+        if (input[i] < smallestNumberSeen) {
+            smallestNumberSeen = input[i]
+        } else {
+            leftBound = i;
+        }
+    }
+ 
+    console.log(`(${leftBound}, ${rightBound})`)
 }
 console.log(smallestSortWindow(sampleArray));
 console.log(smallestSortWindow(sampleArray2));

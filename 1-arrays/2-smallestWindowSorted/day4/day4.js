@@ -15,7 +15,8 @@ Examples:
 //Placeholder for the end bound to return 
 const sampleArray = [3,7,5,6,9];
 const sampleArray2 = [50,36,1,23,4,17,27,39,80];
-const sampleArray3 = [3,5,23,4,60,8,27,80];
+// const sampleArray3 = [3,5,23,4,60,8,27,80];
+// const sampleArray4 = [2,4,6,8,10,12];
 
 const smallestSortWindow = (array)=>{
     const n = array.length;
@@ -42,6 +43,41 @@ const smallestSortWindow = (array)=>{
 
     return [start, end];
 }
-console.log(smallestSortWindow(sampleArray));
+// console.log(smallestSortWindow(sampleArray));
 console.log(smallestSortWindow(sampleArray2));
-console.log(smallestSortWindow(sampleArray3));
+// console.log(smallestSortWindow(sampleArray3));
+// console.log(smallestSortWindow(sampleArray4));
+
+function findUnsortedWindow(arr) {
+    let n = arr.length;
+  
+    // Find the first element that breaks the increasing order from the left
+    let left = 0;
+    for (let i = 1; i < n; i++) {
+      if (arr[i] < arr[left]) {
+        left = i;
+      }
+    }
+  
+    // If no element breaks increasing order, return -1, -1 (sorted)
+    if (left === 0) {
+      return [-1, -1];
+    }
+  
+    // Find the last element that breaks the decreasing order from the right
+    let right = n - 1;
+    for (let i = n - 2; i >= 0; i--) {
+      if (arr[i] > arr[right]) {
+        right = i;
+      }
+    }
+  
+    return [left, right];
+  }
+  
+  // Example usage
+
+  const result = findUnsortedWindow(sampleArray2);
+  console.log(result);
+
+console.log(smallestWindowToSortForInput(sampleArray2));
