@@ -1,9 +1,9 @@
 const smallestSortWindow = require('./day8');
 
 
-  it('returns [0, -1] for an already sorted array', () => {
+  it('returns [0, 0] for an already sorted array', () => {
     const array = [1, 2, 3, 4, 5];
-    expect(smallestSortWindow(array)).toEqual([-1, -2]);
+    expect(smallestSortWindow(array)).toEqual([0,0]);
   });
 
   it('returns [0, 1] for an array with two elements in descending order', () => {
