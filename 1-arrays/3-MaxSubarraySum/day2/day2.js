@@ -51,5 +51,5 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(maxSubarraySum)
     }
-console.log(maxSubarraySum(sampleArray2));
+console.log(maxSubarraySum(sampleArray3));
 module.exports = maxSubarraySum;
