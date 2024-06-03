@@ -1,6 +1,22 @@
 ### Results
+Not resolved. Observations coming:
 
+What I first gleamed from this problem is that the items in the array needed to be sorted. And this might be my mistake for assuming since one of the arguments in my samples is a bunch or strings.
 
+I first thought I needed to sort the array, and then because Im not wanting to deal with half of the values, I keep diving the values somehow in half until I get the biggest number.
+
+Ana had suggested a couple things:
+- I needed to first understand the types. The structure in which I will have the output in. 
+- Since this is a tree where nodes and leaves can change this would be an object as the most efficient data structure to manipulate things. A multidimensional array MIGHT help but its  not as easy to deal with. 
+
+`type Tree = {
+type: “node”;
+value: number;
+left: Tree
+right: Tree
+}
+| {type: “leaf ”; value: number}
+`
 ### Time to solve
 
 
