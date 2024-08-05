@@ -27,25 +27,22 @@ const sampleArray2 = [34, 105, -50, 42, 14, -5, 86];
 const sampleArray3 = [-5, -1, 8, -9];
 
 const biggestValueIndex = (array) =>{
-    console.log('ITS WORKING!');
-    let biggestNumberSoFar;
+    let biggestIndexSoFar = 0;
     for (let i = 0; i < array.length; i++) {
-        // let biggestNumberSoFar = array[i];
-        console.log(`BIGGEST NUMBER SO FAR: ${biggestNumberSoFar }`);
-        if(array[i+1] < array[i]){
-            console.log(`${array[i+1]} > ${biggestNumberSoFar}`);
-            biggestNumberSoFar = array[i +1];
-            console.log(`AFTER: ${biggestNumberSoFar}`);
-        } else{
-            biggestNumberSoFar = array[i]
-
-        }
+        console.log(`${array[i]} : ${array[biggestIndexSoFar]}`)
+        if(array[i] > array[biggestIndexSoFar]){
+            biggestIndexSoFar = i;
+            console.log(`BIGGEST NUMBER SO FAR: ${array[biggestIndexSoFar]}, Index: ${biggestIndexSoFar}`);  
+        }    
     }
+return biggestIndexSoFar;
 
 }
-console.log(biggestValueIndex(sampleArray));
+
+console.log(biggestValueIndex(sampleArray2));
+
 
 // for loop 
-//  - Inside for loop: isolate number to determine the biggest in sieze somehow
+//  - Inside for loop: isolate number to determine the biggest in size somehow
 //  -pull it out to its own variable to keep track
 //  when the biggest number is isFunctionDeclaration, ask for its index

@@ -1,7 +1,7 @@
 ### Results
-NOT SOLVED!
-
-Remember the starting point for the index is important, we have a loop and then you compare the array value so far with whatever value is indicated with the array index youre keeping track of.
+SOLVED in 12 minutes But with caveats.
+I need to make sure I remember to keep track of the INDEX ITSELF, not the value the index is connected to in the array.
+I first make the 
 
 ### Things To Remember: 
 - Keep using Sora to talk to as a guide
@@ -12,7 +12,5 @@ Remember the starting point for the index is important, we have a loop and then 
 idk yet! 
 
 ### Time to solve
-Took 21 minutes for a solution that was incorrect. 
+Took 15 minutes for a solution that was correct but had a bug in my Code that delayed my solution a few minutes. 
 
-### Time to understand
-N/A Need to come back to my Figma at a later time to help me understand better.
