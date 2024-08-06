@@ -26,13 +26,25 @@ const sampleArray = [-2,1,-3,4,-1,2,1,-5,-4];
 const sampleArray2 = [34, 105, -50, 42, 14, -5, 86];
 const sampleArray3 = [-5, -1, 8, -9];
 
+// Steps:
+// variable for index
+//variable for the biggest number so far 
+//iterate through array - condtional if the number at [variableIndex] > array[i]
+// put it in result variable;
+
 const biggestValueIndex = (array) =>{
-   
+let indexValue = 0;
+let result;
+for (let i = 0; i < array.length; i++) {
+    if(array[indexValue] < array[i]){
+        console.log(`BIGGEST NUMBER SEEN: ${array[i]} at Index: ${[i]}`)
+
+    } else{
+        indexValue +=1;
+    }
+    
+}
 
 }
 console.log(biggestValueIndex(sampleArray));
 
-// for loop 
-//  - Inside for loop: isolate number to determine the biggest in sieze somehow
-//  -pull it out to its own variable to keep track
-//  when the biggest number is isFunctionDeclaration, ask for its index
