@@ -27,20 +27,7 @@ const sampleArray2 = [34, 105, -50, 42, 14, -5, 86];
 const sampleArray3 = [-5, -1, 8, -9];
 
 const biggestValueIndex = (array) =>{
-    console.log('ITS WORKING!');
-    let biggestNumberSoFar;
-    for (let i = 0; i < array.length; i++) {
-        // let biggestNumberSoFar = array[i];
-        console.log(`BIGGEST NUMBER SO FAR: ${biggestNumberSoFar }`);
-        if(array[i+1] < array[i]){
-            console.log(`${array[i+1]} > ${biggestNumberSoFar}`);
-            biggestNumberSoFar = array[i +1];
-            console.log(`AFTER: ${biggestNumberSoFar}`);
-        } else{
-            biggestNumberSoFar = array[i]
-
-        }
-    }
+   
 
 }
 console.log(biggestValueIndex(sampleArray));
