@@ -39,8 +39,10 @@ return biggestIndexSoFar;
 
 }
 
-console.log(biggestValueIndex(sampleArray2));
-
+// console.log(biggestValueIndex(sampleArray2));
+console.log(sampleArray.map((index)=>(
+    index *2
+)));
 
 // for loop 
 //  - Inside for loop: isolate number to determine the biggest in size somehow

@@ -1,0 +1,11 @@
+Were going to build our own unit test library with a similar syntax to how other popular unit test libraries work. 
+Given the following code, define the "expecting", "toBe", "equalTo", "lessThan" and "greaterThan" functions so that the code successfully executes with the shown outputs.
+
+const addNumbers = (numbers) =>{
+  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+const result = addNumbers([1, 2, 3]);
+const result2 = expecting(result).toBeEqualTo(6); 
+const result3 = expecting(result).toBeGreaterThan(5); 
+const result4 = expecting(result).toBeEqualTo(7);

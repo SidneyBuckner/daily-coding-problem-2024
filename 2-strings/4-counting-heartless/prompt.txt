@@ -1,0 +1,8 @@
+Given a string representing a Heartless horde, count the number of each Heartless type.
+Extra: Return the Heartless type that shows up the most in the string.
+
+input: "Shadow Soldier Darkball Soldier "
+output: { Shadow: 1, Soldier: 1 Darkball: 1}
+
+input: "Darkball solider possessor invincible Soldier invincible fluttering shadow shadow darkling bug possessor invincible invincible "
+output: { Darkball: 1, possessor: 2 , invincible:4 ,Soldier:2 fluttering: 1, darkling: 1, bug: 1 , }

@@ -1,0 +1,72 @@
+You have been tasked with finishing the getVideosWithLikes function so that it has access to the data for videos and likes in order to pass both to mergeVideosAndLikes.
+If getting data for videos fails, we should show an error. If getting the data for likes fails, we should still show the videos. Note that changes to mergeVideosAndLikes are needed.
+
+const isNetworkError = () => Math.random() * 100 > 50;
+ 
+const getVideos = () => {
+  return new Promise((resolve, reject) => {
+    if (isNetworkError()) reject(new Error("Network Error"));
+    
+    setTimeout(() =>
+      resolve([
+        { id: 259, title: "One Piece", src: "one-piece-thumbnail.png" },
+        { id: 820, title: "Haikyuu", src: "haikyuu-thumbnail.png" },
+        { id: 008, title: "That time I got Reincarnated As A Slime", src: smile-thumbnail.png" },
+        { id: 135, title: "Sailor Moon", src: "sailor-moon-thumbnail.png" },
+        { id: 480, title: "Naruto", src: "naruto-thumbnail.png" }
+      ])
+    );
+  }, 1500);
+};
+ 
+const getVideoLikes = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isNetworkError()) reject(new Error("Network Error"));
+      resolve([
+        { videoId: 259, numOfLikes: 1060732 },
+        { videoId: 820, numOfLikes: 82049985 },
+        { videoId: 008, numOfLikes: 2706111 },
+        { videoId: 135, numOfLikes: 48131394 },
+        { videoId: 480, numOfLikes: 5523300 }
+      ]);
+    }, 900);
+  });
+};
+
+/**
+* mergeVideosAndLikes returns the following object:
+* videoAndLikes {Object}
+* videoAndLikes.id {Number}
+* videoAndLikes.title {String}
+* [videoAndLikes.numOfLikes] {Number} // Optional
+*/
+const mergeVideosAndLikes = (videos, likes) => {
+  if (!likes) return videos;
+  const likesMap = new Map();
+  likes.forEach((like) => {
+    likesMap.set(like.videoId, like);
+  });
+  return videos.map((video) => {
+    return {
+      ...video,
+      numOfLikes: likesMap.get(video.id).numOfLikes
+    };
+  });
+};
+
+const getVideosWithLikes = async () => {
+  // Your code here to enable mergeVideosAndLikes to be called with data from both getVideos() and getVideoLikes()
+
+ let videos = await getVideos();
+//  console.log(videos);
+ let videoLikes = await getVideoLikes();
+ console.log(videoLikes);
+  // If getVideos() fails, then show an error
+  // If getVideoLikes() fails, then still show videos
+  
+  // return mergeVideosAndLikes(videos, likes)
+};
+
+getVideosWithLikes();
+

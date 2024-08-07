@@ -1,0 +1,47 @@
+Write a function called getOgranizationMembers that returns an array of all the names of the Organization XIII members provided in the following list.
+The order does not matter;
+
+const organizationXIII = {
+name: "Xemnas",
+number: 1,
+subordinates: [
+    {
+        name: "Xigbar",
+        number: 2
+    },{
+        name: "Xaldin",
+        number: 3
+    },{
+        name: "Vexen",
+        number: 4
+    },{
+        name: "Lexaeus",
+        number: 5
+    },{
+        name: "Zexion",
+        number: 6
+    },{
+        name: "Siax",
+        number: 7
+    },{
+        name: "Axel",
+        number: 8
+    },{
+        name: "Demyx",
+        number: 9
+    },{
+        name: "Luxord",
+        number: 10
+    },{
+        name: "Marluxia",
+        number: 11
+    },{
+        name: "Larxene",
+        number: 12
+    },{
+        name: "Roxas",
+        number: 13
+    }
+]
+
+}
