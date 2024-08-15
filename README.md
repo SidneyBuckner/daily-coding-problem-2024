@@ -5,12 +5,19 @@ Reviewing essentials on Javascript Data Structures and algorithms along with fro
 ## [Bounds / Rules to Follow:](https://fullstackopen.com/en/)
 
 1. One Coding Problem a day. Go in Order to make things easier by the Daily Coding Problem & Eloquent Javascript Books based on the subjects listed below.
+
 2. Focus on one of the two options: Solving the problem in a coding environment during one session OR draw it out in Figma.  
+
 3. Use 45 Minutes of time on drawing or solving the problem. 15 to talk it through to decompress. Record your findings and understanding of the problem.
+
 4. If you get the answer right on the first try, great! You can move to the next problem the next day or refactor into another solution the next day.
-5.If you do not solve the problem that day, put it down, decompress try again the next day, for three days.
-6.Repeat cycle for 3 days, if the solution has not been found by the 3rd day, LOOK UP A SOLUTION. Keep track of the solutions you do not get for the week. 
+
+5. If you do not solve the problem that day, put it down, decompress try again the next day, for three days.
+
+6. Repeat cycle for 3 days, if the solution has not been found by the 3rd day, LOOK UP A SOLUTION. Keep track of the solutions you do not get for the week.
+
 7. Review sessions for 1 week once a month. Go through the problems you have missed or not completed within three days and review them step by step through a drawing in figma with a solution in hand.
+
 8. Keep moving with the progress you've made.
 
 
