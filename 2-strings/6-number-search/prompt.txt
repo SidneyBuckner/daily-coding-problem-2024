@@ -1,0 +1,11 @@
+Given a string of characters, letters and numbers, search for all the numbers in the string, add them together and return the final number divided by the total amount of letters in the string. 
+The Final Answer should be rounded to the nearest whole number. 
+
+Input: "Hell09-5"
+Output: "4"
+
+Input: "One Number*1"
+Output: 0
+
+Input: "Hello6 9World 2, Nic8e D7ay!"
+Output: 2
