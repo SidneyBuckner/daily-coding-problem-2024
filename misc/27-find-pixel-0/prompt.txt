@@ -1,0 +1,185 @@
+/*
+
+Our sensor technology has received a major upgrade, and now provides two-dimensional images using nested arrays.
+
+- Every pixel is still a 1 or a 0.
+- The image will contain exactly one rectangle of 0s on a background of 1s.
+- We consider the top left pixel of the images to be at position 0,0.
+
+Write a function that takes the image as input and returns the row and column indices of the rectangle's top-left corner.
+
+You can choose to reuse or modify first_zero or get_width, or start over.
+
+Sample input and output:
+
+image1 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 0, 0, 0, 1],
+  [1, 1, 1, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+]
+find_rectangle(image1) => (2,3)  row, column
+
+image2 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 0],
+]
+find_rectangle(image2) => (4,6)
+
+image3 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 0, 0],
+  [1, 1, 1, 1, 1, 0, 0],
+]
+find_rectangle(image3) => (3,5)
+  
+image4 = [
+  [0, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+]
+find_rectangle(image4) => (0,0)
+
+image5 = [
+  [0],
+]
+find_rectangle(image5) => (0,0)
+
+Complexity Analysis variables:
+
+w: width
+h: height
+
+
+*/
+
+// Steps:
+//Iterate through array
+// variable saving what index were at so far / 
+// vraible that starts at index 0 keep adding one until we find the value 0
+
+const image1 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 0, 0, 0, 1],
+  [1, 1, 1, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+];
+// console.log(findRectangle(image1));  // [2,3]  row, column
+
+const image2 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 0],
+];
+// console.log(findRectangle(image2));  // [4,6]  row, column
+
+const image3 = [
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 0, 0],
+  [1, 1, 1, 1, 1, 0, 0],
+];
+// console.log(findRectangle(image3));  // [3,5]  row, column
+
+// const image4 = [
+//   [0, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+// ];
+// console.log(findRectangle(image4));  // [0,0]  row, column
+
+const image5 = [
+  [0],
+];
+// console.log(findRectangle(image5));  // [0,0]  row, column
+
+
+// const firstZero = (arr) =>{
+//   let indexSoFar= 0;
+//  for(let i = 0; i< arr.length; i++){
+//    if(arr[indexSoFar] !== 0){
+//      indexSoFar = indexSoFar + 1;
+//     //  console.log(`array index: ${indexSoFar}, value: ${arr[indexSoFar]}`);
+//    }
+
+
+
+
+const brianGetWidth = (arr) =>{
+
+ for(let i = 0; i< arr.length; i++){
+   if(arr[indexSoFar] == 0){
+     return i;
+   }
+
+//  }
+//  return indexSoFar;
+// }
+// console.log(firstZero(image4));
+
+//Steps:
+// iterate through array
+// varaible for the index
+// total 0s seen so far
+
+// const getWidth = (arr)=> {
+//   // console.log("Hello");
+//   let zeroesSeenSoFar = 0;
+//   for(let i = 0; i < arr.length; i++){
+//     // console.log(arr[i]);
+//     if(arr[i] === 0){
+//       // console.log(`BEFORE: ${zeroesSeenSoFar}`);
+//       zeroesSeenSoFar = zeroesSeenSoFar +  1;
+//       // console.log(`AFTER: ${zeroesSeenSoFar}`);
+//     }
+//   }
+// return zeroesSeenSoFar;
+// }
+
+
+// console.log(getWidth(image1));
+
+const image4 = [
+  [0, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1],
+];
+
+//Steps
+// iterate through array
+// varaiebles: calls out index of child array / one for parant array
+// nested loop
+const findRectangle = (arr) =>{
+  let parentIndex = 0;
+  let childIndex = 0; 
+// console.log('HELLO');
+for(let i = 0; i < arr.length; i++){
+  parentIndex = i;
+  for(let j = 0; j < arr.length; j++){
+    if(arr[j] === 0){
+      childIndex = arr[j];
+      console.log(` HERE: ${arr[j]}`);
+    }
+    parentIndex += 1;
+  }
+}
+console.log(parentIndex, childIndex);
+}
+
+console.log(findRectangle(image4));
