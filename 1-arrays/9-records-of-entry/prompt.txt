@@ -1,0 +1,58 @@
+/*
+
+We are given the record of entry and exit records for a building as follows:
+
+records1 = [
+  ["Martha",   "enter"],
+  ["Paul",     "enter"],
+  ["Martha",   "exit"],
+  ["Steve",    "enter"],
+  ["Jennifer", "enter"],
+  ["Curtis",   "enter"],
+  ["Paul",     "exit"],
+  ["Martha",   "enter"],
+  ["Martha",   "exit"],
+  ["Jennifer", "exit"],
+  ["Paul",     "enter"],
+  ["Paul",     "exit"] 
+]
+
+Given a list of records as shown above, return a collection of all the people that appear in the records. 
+
+Note: each person should only appear once in the output.
+
+Expected output: ["Paul", "Curtis", "Steve", "Martha", "Jennifer"]
+
+Complexity Discussion:
+n: the length of the records array
+
+*/
+
+
+const records1 = [
+	["Martha", "enter"],
+	["Paul", "enter"],
+	["Martha", "exit"],
+	["Steve", "enter"],
+	["Jennifer", "enter"],
+	["Curtis", "enter"],
+	["Paul", "exit"],
+	["Martha", "enter"],
+	["Martha", "exit"],
+	["Jennifer", "exit"],
+	["Paul", "enter"],
+	["Paul", "exit"]
+];
+
+
+ const enterBuildingRecords = ( list) =>{
+   let output = [];
+   for(let i=0; i < list.length; i++){
+    if(list[i][1] === "enter"){
+      output.push(list[i][0]);
+    }
+   }
+    return output.filter((element, index ) =>{return element.indexOf(element) === index});
+ }
+ 
+ console.log(enterBuildingRecords(records1));

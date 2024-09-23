@@ -17,8 +17,10 @@ Example:
 * Output: 2
 * Explanation: [8] is the largest integer in the array at index 2.
 */
-
-const validParens = (string)=>{
+const string1 = [-5, -1, 8, -9];
+const string2 = [34, 105, -50, 42, 14, -5, 86];
+const string3 = [-2,1,-3,4,-1,2,1,-5,-4];
+const greatestValue = (string)=>{
 return 'IM WORKING';
 }
-console.log(validParens('()'));
+console.log(validParens(string1));
