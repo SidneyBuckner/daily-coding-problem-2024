@@ -11,7 +11,20 @@
  * output: [120, 60, 40, 30, 24]
 */
 
-const productOfElements = (string)=>{
-return 'IM WORKING';
+const productOfElements = (array)=> {
+    let result = [];
+    let product = 1;
+for (let i = 0; i < array.length; i++) {
+
+    if(array[i+1] !== array[i]){
+        console.log(`This is the index so far: ${array[i]}`);
+        console.log(`this is the next index ${array[i+1]}`)
+        product = product*array[i];
+    
+        result.push(product);
+        console.log(`this is the PRODUCT: ${product}`);
+    }
+    console.log(result);
 }
-console.log();
+}
+console.log(productOfElements([3,2,1]));
